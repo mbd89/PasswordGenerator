@@ -2,8 +2,12 @@ body {
     font-family: 'JetBrains Mono';
     background: black;
     color: white;
-    display: grid;
-    place-items: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 
 }
 
