@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Young+Serif&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Password generator app</title>
+
+</head>
+
+<body>
+  <header>
+    <p>Password Generator</p>
+  </header>
+  <div class="container">
+
+    <div class="generated-password">
+      <p id="generated-pass" class="icon" data-placeholder="P4$5W0rD!"></p>
+     
+    </div>
+
+    <div class="character">
+      <div class="char-length">
+        <p>Character Length</p><span id="char-len">0</span>
+      </div>
+      <div class="slider">
+        <input type="range" min="0" max="16" value="0" id="range" oninput="showProgress()">
+      </div>
+
+      <div class="checkBox">
+
+        <img class="uncheck1" src="assets/images/checkbox.png" alt="checkbox empty">
+        <img id="checked1" src="assets/images/Group 10.png" class="hidden" alt="checked">
+        <label for="upper">Include Uppercase Letters</label>
+      </div>
+
+      <div class="checkBox">
+        <!-- 
+  <input type="checkbox" id="lower" name="lower"/> -->
+        <img class="uncheck2" src="assets/images/checkbox.png" alt="checkbox">
+        <img id="checked2" src="assets/images/Group 10.png" class="hidden" alt="checked">
+        <label for="lower">Include Lowercase Letters</label>
+      </div>
+
+      <div class="checkBox">
+        <img class="uncheck3" src="assets/images/checkbox.png" alt="checkbox">
+        <img id="checked3" src="assets/images/Group 10.png" class="hidden" alt="checked">
+        <label for="number">Include Numbers</label>
+      </div>
+
+      <div class="checkBox">
+        <img class="uncheck4" src="assets/images/checkbox.png" alt="checkbox">
+        <img id="checked4" src="assets/images/Group 10.png" class="hidden" alt="checked">
+        <label for="symbols">Include Symbols</label>
+      </div>
+
+
+
+      <div class="char-strength">
+
+        <div>
+          <p>STRENGTH</p>
+        </div>
+
+        <div class="strength">
+          <p class='strength-text'></p>
+          <div>
+            <img class="img1" src="assets/images/Rectangle (1).svg" alt="strength-indicator">
+            <img class="img2" src="assets/images/Rectangle (1).svg" alt="strength-indicator">
+            <img class="img3" src="assets/images/Rectangle (1).svg" alt="strength-indicator">
+            <img class="img4" src="assets/images/Rectangle (1).svg" alt="strength-indicator">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="fail-state hidden">Must include 6+ characters</div>
+      <button id="generate-btn">GENERATE<span><img src="assets/images/icon-arrow-right.svg" alt="arrow-icon"></span>
+
+      </button>
+    
+   
+    </div>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
